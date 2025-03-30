@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Values.app.name }}
+  namespace: {{ .Values.app.ns }}
+data:
+  index.html: |
+    <html>
+    <body>
+    Hi! I am {{ .Values.pkg.name }}. My version is {{ .Values.pkg.ver }}. 
+    </body>
+    </html>

@@ -1,0 +1,12 @@
+app:
+  name: nginx
+  ns: lesson25
+  ver: "1.16.0"
+pkg:
+  name: nginx
+  ver: latest
+  prt: 80
+  tprt: 80
+mount:
+  name: mnt
+  path: /usr/share/nginx/html
