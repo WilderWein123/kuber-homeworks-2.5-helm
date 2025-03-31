@@ -1,8 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: {{ .Values.app.name }}
-  namespace: {{ .Values.app.ns }}
+  name: {{ .Values.pkg.name }}-{{ .Values.pkg.ver }}-html
 data:
   index.html: |
     <html>

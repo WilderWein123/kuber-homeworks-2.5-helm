@@ -1,7 +1,6 @@
 app:
   name: nginx
-  ns: lesson25
-  ver: "1.16.0"
+  ver: "1.17.0"
 pkg:
   name: nginx
   ver: latest

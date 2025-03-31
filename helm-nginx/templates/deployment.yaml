@@ -1,8 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Values.app.name }}
-  namespace: {{ .Values.app.ns }}
+  name: {{ .Values.app.name }}-{{ .Values.pkg.ver }}
 spec:
   selector:
     matchLabels:
@@ -11,7 +10,9 @@ spec:
     metadata:
       labels:
         app: {{ .Values.pkg.name }}
-      - name: {{ .Values.app.ns }}-{{ .Values.pkg.name }}
+    spec:
+      containers:
+      - name: {{ .Values.app.name }}-{{ .Values.pkg.name }}
         image: {{ .Values.pkg.name }}:{{ .Values.pkg.ver }}
         resources:
           limits:
